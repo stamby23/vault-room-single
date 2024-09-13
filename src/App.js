@@ -1,7 +1,7 @@
 import React from "react";
 import './App.css';
 import { Input, Button } from "@material-tailwind/react";
-import VaultIcon from "./vault.png"
+import VaultIcon from "./vault.png";
 import useSound from "use-sound";
 import openSfx from "./vault_door_open.mp3";
 import wobbleSfx from "./metal_swing.mp3";
@@ -15,8 +15,8 @@ function App() {
   const [playWobble] = useSound(wobbleSfx, { volume: 0.10 });
 
   function onSubmitButton() {
-    if(stage === 0){
-      if(password.replace(/ /g,'').toLowerCase() === "ethicalaiisthefuture") {
+    if(stage === 0) {
+      if(password.replace(/ /g,'').toLowerCase() === "test") {
         setAnimation(2);
         playOpen();
         setStage(1);
@@ -28,8 +28,8 @@ function App() {
     }
 
     if(stage === 1) {
-      if(password === "test2") {
-        setAnimation(2);
+      if(password === "reward") {
+        setAnimation(3);
         playOpen();
         setStage(2);
       }
@@ -87,15 +87,18 @@ function App() {
             <div class="letter L" stage={stage}>L</div>
           </div>
         </div>
-        <div className="relative flex w-full max-w-[24rem]">
-          <img 
-            className="Vault-icon" 
-            src={VaultIcon}
-            alt="A vault door!"
-            onClick={() => {setAnimation(1); playWobble()}}
-            onAnimationEnd={() => setAnimation(0)}
-            animation={animation}
-          />
+        <div className="relative flex w-full max-w-[24rem] vault-container">
+          <div>
+            <img 
+              className="Vault-icon" 
+              src={VaultIcon}
+              alt="A vault door!"
+              onClick={() => {setAnimation(1); playWobble()}}
+              onAnimationEnd={() => setAnimation(0)}
+              animation={animation}
+              stage={stage}
+            />
+          </div>
         </div>
         <div className="relative flex w-full max-w-[24rem] mt-7">
           <Input
