@@ -16,7 +16,7 @@ function App() {
 
   function onSubmitButton() {
     if(stage === 0) {
-      if(password.replace(/ /g,'').toLowerCase() === "test") {
+      if(password.replace(/ /g,'').toLowerCase() === "ethicalaiisthefuture") {
         setAnimation(2);
         playOpen();
         setStage(1);
