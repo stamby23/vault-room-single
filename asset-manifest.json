@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/vault-room/static/css/main.ebe56691.css",
-    "main.js": "/vault-room/static/js/main.14ee5a1d.js",
+    "main.js": "/vault-room/static/js/main.52982fa9.js",
     "static/js/885.38e5e587.chunk.js": "/vault-room/static/js/885.38e5e587.chunk.js",
     "static/media/brickwall.png": "/vault-room/static/media/brickwall.8186b519c028786e080d.png",
     "static/media/vault_door_open.mp3": "/vault-room/static/media/vault_door_open.d312d4a348f9aa400b35.mp3",
@@ -9,11 +9,11 @@
     "static/media/vault.png": "/vault-room/static/media/vault.24e59708713c25361e95.png",
     "index.html": "/vault-room/index.html",
     "main.ebe56691.css.map": "/vault-room/static/css/main.ebe56691.css.map",
-    "main.14ee5a1d.js.map": "/vault-room/static/js/main.14ee5a1d.js.map",
+    "main.52982fa9.js.map": "/vault-room/static/js/main.52982fa9.js.map",
     "885.38e5e587.chunk.js.map": "/vault-room/static/js/885.38e5e587.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ebe56691.css",
-    "static/js/main.14ee5a1d.js"
+    "static/js/main.52982fa9.js"
   ]
 }
