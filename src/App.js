@@ -100,7 +100,7 @@ function App() {
             />
           </div>
         </div>
-        <div className="relative flex w-full max-w-[24rem] mt-7">
+        <div className="relative flex w-full max-w-[24rem] mt-7 input" stage={stage}>
           <Input
             label="Password"
             value={password}

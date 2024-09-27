@@ -59,7 +59,7 @@
 }
 
 .letter[stage="0"], .Second-clue-text-p[stage="0"], .letter[stage="2"],
-.Second-clue-text-p[stage="2"] {
+.Second-clue-text-p[stage="2"], .input[stage="2"]{
   opacity: 0;
 }
 
@@ -205,6 +205,10 @@
   }
 
   .Second-clue-text-p[stage="2"] {
+    animation: fade-out 6.82s linear;
+  }
+
+  .input[stage="2"] {
     animation: fade-out 6.82s linear;
   }
 
