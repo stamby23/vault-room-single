@@ -28,7 +28,7 @@ function App() {
     }
 
     if(stage === 1) {
-      if(password === "reward") {
+      if(password.replace(/ /g,'').toLowerCase() === "reward") {
         setAnimation(3);
         playOpen();
         setStage(2);
@@ -69,7 +69,7 @@ function App() {
           </div>
         </div>
         <div className="Second-clue Second-clue-text">
-          <p className="Second-clue-text-p" stage={stage}>Open the drawer!</p>
+          <p className="Second-clue-text-p" stage={stage}>You are half-way there! To get to the end, you will need to <strong>open the drawer</strong>!</p>
         </div>
         <div className="Second-clue Second-clue-letters">
           <div class="flex justify-center">
