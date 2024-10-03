@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/vault-room/static/css/main.ebe56691.css",
-    "main.js": "/vault-room/static/js/main.52982fa9.js",
+    "main.css": "/vault-room/static/css/main.2bb8ea1b.css",
+    "main.js": "/vault-room/static/js/main.98dbf6e9.js",
     "static/js/885.38e5e587.chunk.js": "/vault-room/static/js/885.38e5e587.chunk.js",
     "static/media/brickwall.png": "/vault-room/static/media/brickwall.8186b519c028786e080d.png",
     "static/media/vault_door_open.mp3": "/vault-room/static/media/vault_door_open.d312d4a348f9aa400b35.mp3",
     "static/media/metal_swing.mp3": "/vault-room/static/media/metal_swing.26057493c65df7bc89fd.mp3",
     "static/media/vault.png": "/vault-room/static/media/vault.24e59708713c25361e95.png",
     "index.html": "/vault-room/index.html",
-    "main.ebe56691.css.map": "/vault-room/static/css/main.ebe56691.css.map",
-    "main.52982fa9.js.map": "/vault-room/static/js/main.52982fa9.js.map",
+    "main.2bb8ea1b.css.map": "/vault-room/static/css/main.2bb8ea1b.css.map",
+    "main.98dbf6e9.js.map": "/vault-room/static/js/main.98dbf6e9.js.map",
     "885.38e5e587.chunk.js.map": "/vault-room/static/js/885.38e5e587.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ebe56691.css",
-    "static/js/main.52982fa9.js"
+    "static/css/main.2bb8ea1b.css",
+    "static/js/main.98dbf6e9.js"
   ]
 }
