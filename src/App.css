@@ -14,16 +14,18 @@
 }
 
 .vault-container{
-  background-image: url("brickwall.png");
-  background-size: contain;
+  background-image: url("key.png");
+  background-size: cover;
 }
 
 .First-clue-text {
   top: 10vh;
-  right: 5vw;
+  right: 73vw;
   width: 280px;
   height: 100px;
-  text-align: right;
+  text-align: left;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 22px;
 }
 
 .First-clue-triangles {
@@ -33,8 +35,7 @@
   height: 100px;
 }
 
-.triangle[stage="1"], .First-clue-text-p[stage="1"], .triangle[stage="2"],
-.First-clue-text-p[stage="2"] {
+.triangle[stage="1"], .input[stage="1"] {
   opacity: 0;
 }
 
@@ -51,32 +52,16 @@
   height: 100px;
 }
 
-.Second-clue-letters {
-  top: 75vh;
-  right: 70vw;
-  width: 400px; 
-  height: 100px;
-}
-
-.letter[stage="0"], .Second-clue-text-p[stage="0"], .letter[stage="2"],
-.Second-clue-text-p[stage="2"], .input[stage="2"]{
-  opacity: 0;
-}
-
 @media (prefers-reduced-motion: no-preference) {
   .Vault-icon[animation="1"] {
     animation: wobble 1s 1;
   }
 
   .Vault-icon[animation="2"] {
-    animation: spin 6.82s linear;
-  }
-
-  .Vault-icon[animation="3"] {
     animation: spin 6.82s linear, fade-out 6.82s linear;
   }
 
-  .Vault-icon[stage="2"] {
+  .Vault-icon[stage="1"] {
     opacity: 0;
   }
 
@@ -104,102 +89,6 @@
     animation: fade-out 6.82s linear;
   }
 
-  .A[stage="1"]{
-    animation: fade-in 6.82s linear, move-a 10s linear infinite;
-  }
-
-  .B[stage="1"] {
-    animation: fade-in 6.82s linear, move-b 10s linear infinite;
-  }
-
-  .C[stage="1"] {
-    animation: fade-in 6.82s linear, move-c 10s linear infinite;
-  }
-
-  .D[stage="1"] {
-    animation: fade-in 6.82s linear, move-d 10s linear infinite;
-  }
-
-  .E[stage="1"] {
-    animation: fade-in 6.82s linear, move-e 10s linear infinite;
-  }
-
-  .F[stage="1"] {
-    animation: fade-in 6.82s linear, move-f 10s linear infinite;
-  }
-
-  .G[stage="1"] {
-    animation: fade-in 6.82s linear, move-g 10s linear infinite;
-  }
-
-  .H[stage="1"] {
-    animation: fade-in 6.82s linear, move-h 10s linear infinite;
-  }
-
-  .I[stage="1"] {
-    animation: fade-in 6.82s linear, move-i 10s linear infinite;
-  }
-
-  .J[stage="1"] {
-    animation: fade-in 6.82s linear, move-j 10s linear infinite;
-  }
-
-  .K[stage="1"] {
-    animation: fade-in 6.82s linear, move-k 10s linear infinite;
-  }
-
-  .L[stage="1"] {
-    animation: fade-in 6.82s linear, move-l 10s linear infinite;
-  }
-
-  .A[stage="2"] {
-    animation: fade-out 6.82s linear;
-  }
-
-  .B[stage="2"] {
-    animation: fade-out 6.82s linear;
-  }
-
-  .C[stage="2"] {
-    animation: fade-out 6.82s linear;
-  }
-
-  .D[stage="2"] {
-    animation: fade-out 6.82s linear;  
-  }
-
-  .E[stage="2"] {
-    animation: fade-out 6.82s linear;  
-  }
-
-  .F[stage="2"] {
-    animation: fade-out 6.82s linear;  
-  }
-
-  .G[stage="2"] {
-    animation: fade-out 6.82s linear;  
-  }
-
-  .H[stage="2"] {
-    animation: fade-out 6.82s linear;  
-  }
-
-  .I[stage="2"] {
-    animation: fade-out 6.82s linear;  
-  }
-
-  .J[stage="2"] {
-    animation: fade-out 6.82s linear;  
-  }
-
-  .K[stage="2"] {
-    animation: fade-out 6.82s linear;  
-  }
-
-  .L[stage="2"] {
-    animation: fade-out 6.82s linear;  
-  }
-
   .Second-clue-text-p[stage="1"] {
     animation: fade-in 6.82s linear;
   }
@@ -208,7 +97,7 @@
     animation: fade-out 6.82s linear;
   }
 
-  .input[stage="2"] {
+  .input[stage="1"] {
     animation: fade-out 6.82s linear;
   }
 
@@ -313,173 +202,5 @@
 
   to {
     opacity: 1;
-  }
-}
-
-@keyframes move-a {
-  30% {
-    transform: translate(160px, 40px);
-  }
-
-  60% {
-    transform: translate(160px, 40px);
-  }
-
-  80% {
-    transform: translate(0px, 0px);
-  }
-}
-
-@keyframes move-b {
-  40% {
-    transform: translate(81px, 120px);
-  }
-
-  70% {
-    transform: translate(81px, 120px);
-  }
-
-  80% {
-    transform: translate(0px, 0px);
-  }
-}
-
-@keyframes move-c {
-  40% {
-    transform: translate(40px, 40px);
-  }
-
-  70% {
-    transform: translate(40px, 40px);
-  }
-
-  80% {
-    transform: translate(0px, 0px);
-  }
-}
-
-@keyframes move-d {
-  40% {
-    transform: translate(40px, 40px);
-  }
-
-  70% {
-    transform: translate(40px, 40px);
-  }
-
-  80% {
-    transform: translate(0px, 0px);
-  }
-}
-
-@keyframes move-e {
-  40% {
-    transform: translate(-40px, -40px);
-  }
-
-  70% {
-    transform: translate(-40px, -40px);
-  }
-
-  80% {
-    transform: translate(0px, 0px);
-  }
-}
-
-@keyframes move-f {
-  40% {
-    transform: translate(-15px, -160px);
-  }
-
-  70% {
-    transform: translate(-15px, -160px);
-  }
-
-  80% {
-    transform: translate(0px, 0px);
-  }
-}
-
-@keyframes move-g {
-  40% {
-    transform: translate(-74px, -10px);
-  }
-
-  70% {
-    transform: translate(-74px, -10px);
-  }
-
-  80% {
-    transform: translate(0px, 0px);
-  }
-}
-
-@keyframes move-h {
-  40% {
-    transform: translate(10px, -240px);
-  }
-
-  70% {
-    transform: translate(10px, -240px);
-  }
-
-  80% {
-    transform: translate(0px, 0px);
-  }
-}
-
-@keyframes move-i {
-  40% {
-    transform: translate(-150px, -240px);
-  }
-
-  70% {
-    transform: translate(-150px, -240px);
-  }
-
-  80% {
-    transform: translate(0px, 0px);
-  }
-}
-
-@keyframes move-j {
-  40% {
-    transform: translate(-60px, -240px);
-  }
-
-  70% {
-    transform: translate(-60px, -240px);
-  }
-
-  80% {
-    transform: translate(0px, 0px);
-  }
-}
-
-@keyframes move-k {
-  40% {
-    transform: translate(-98px, 12px);
-  }
-
-  70% {
-    transform: translate(-98px, 12px);
-  }
-
-  80% {
-    transform: translate(0px, 0px);
-  }
-}
-
-@keyframes move-l {
-  40% {
-    transform: translate(-77px, 120px);
-  }
-
-  70% {
-    transform: translate(-77px, 120px);
-  }
-
-  80% {
-    transform: translate(0px, 0px);
   }
 }

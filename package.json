@@ -1,7 +1,7 @@
 {
   "name": "password-page",
   "version": "0.1.0",
-  "homepage": "https://stamby23.github.io/vault-room",
+  "homepage": "https://stamby23.github.io/vault-room-single",
   "private": true,
   "dependencies": {
     "@material-tailwind/react": "^2.1.10",

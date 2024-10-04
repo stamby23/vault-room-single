@@ -1,6 +1,6 @@
 import React from "react";
 import './App.css';
-import { Input, Button } from "@material-tailwind/react";
+import { Input, Button, Dialog,DialogHeader, DialogBody, DialogFooter, } from "@material-tailwind/react";
 import VaultIcon from "./vault.png";
 import useSound from "use-sound";
 import openSfx from "./vault_door_open.mp3";
@@ -13,6 +13,9 @@ function App() {
   const onChange = ({ target }) => setPassword(target.value);
   const [playOpen] = useSound(openSfx, { volume: 0.10 });
   const [playWobble] = useSound(wobbleSfx, { volume: 0.10 });
+  
+  const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(!open);
 
   function onSubmitButton() {
     if(stage === 0) {
@@ -26,25 +29,10 @@ function App() {
         playWobble();
       }
     }
-
-    if(stage === 1) {
-      if(password.replace(/ /g,'').toLowerCase() === "reward") {
-        setAnimation(3);
-        playOpen();
-        setStage(2);
-      }
-      else {
-        setAnimation(1);
-        playWobble();
-      }
-    }
   }
 
   return (
     <div className="App">
-        <div className="First-clue First-clue-text">
-          <p className="First-clue-text-p" stage={stage}>To unveil the magic hidden within, you must rewind the spell. Shift each letter back by three steps in the alphabet, and the secrets will be revealed.</p>
-        </div>
         <div className="First-clue First-clue-triangles">
           <div class="mt-10">
             <div class="flex justify-center">
@@ -68,32 +56,13 @@ function App() {
             </div>
           </div>
         </div>
-        <div className="Second-clue Second-clue-text">
-          <p className="Second-clue-text-p" stage={stage}>You are half-way there! To get to the end, you will need to <strong>open the drawer</strong>!</p>
-        </div>
-        <div className="Second-clue Second-clue-letters">
-          <div class="flex justify-center">
-            <div class="letter A" stage={stage}>A</div>
-            <div class="letter B" stage={stage}>B</div>
-            <div class="letter C" stage={stage}>C</div>
-            <div class="letter D" stage={stage}>D</div>
-            <div class="letter E" stage={stage}>E</div>
-            <div class="letter F" stage={stage}>F</div>
-            <div class="letter G" stage={stage}>G</div>
-            <div class="letter H" stage={stage}>H</div>
-            <div class="letter I" stage={stage}>I</div>
-            <div class="letter J" stage={stage}>J</div>
-            <div class="letter K" stage={stage}>K</div>
-            <div class="letter L" stage={stage}>L</div>
-          </div>
-        </div>
-        <div className="relative flex w-full max-w-[24rem] vault-container">
+        <div className="relative flex w-full max-w-[24rem] vault-container" stage={stage} onClick={() => {if(stage === 1) handleOpen()}}>
           <div>
             <img 
               className="Vault-icon" 
               src={VaultIcon}
               alt="A vault door!"
-              onClick={() => {setAnimation(1); playWobble()}}
+              onClick={() => {if(stage !== 1) {setAnimation(1); playWobble()}}}
               onAnimationEnd={() => setAnimation(0)}
               animation={animation}
               stage={stage}
@@ -120,6 +89,25 @@ function App() {
             Submit
           </Button>
         </div>
+        <Dialog open={open} handler={handleOpen} stage={stage}>
+          <DialogHeader>Congratulations!</DialogHeader>
+          <DialogBody>
+            You managed to solve the riddle by mastering the knowledge of the library and becoming an expert on SAP Ethics!
+          </DialogBody>
+          <DialogFooter>
+            <Button
+              variant="text"
+              color="red"
+              onClick = {() => {handleOpen(); window.location.reload();}}
+              className="mr-1"
+            >
+              <span>Replay</span>
+            </Button>
+            <Button variant="gradient" color="blue" onClick={handleOpen}>
+              <span>Leave the room</span>
+            </Button>
+          </DialogFooter>
+        </Dialog>
     </div>
   );
 }
